@@ -1,0 +1,19 @@
+.feedWrapper {
+  width: 100%;
+  min-height: 400px;
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.placeholder {
+  text-align: center;
+  padding: 4rem;
+  color: var(--primary);
+  opacity: 0.8;
+}

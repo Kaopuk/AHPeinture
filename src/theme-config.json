@@ -1,0 +1,18 @@
+{
+  "colors": {
+    "primary": "#d4af37",
+    "primaryLight": "#f9e29d",
+    "primaryDark": "#8a6d3b",
+    "background": "#050505",
+    "foreground": "#ffffff",
+    "accent": "#1a1a1a"
+  },
+  "typography": {
+    "heading": "'Playfair Display', serif",
+    "body": "'Inter', sans-serif"
+  },
+  "images": {
+    "heroBackground": "/hero-bg.jpg",
+    "logo": "/logo.png"
+  }
+}

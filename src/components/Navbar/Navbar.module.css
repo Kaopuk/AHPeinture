@@ -1,0 +1,99 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logoCrop {
+    width: 100px;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoImg {
+    border-radius: 4px;
+    /* Move up to hide "PEINTURE" */
+    transform: translateY(-5px);
+    mix-blend-mode: screen;
+}
+
+
+
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    align-items: center;
+}
+
+.navLinks a {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.navLinks a:hover {
+    opacity: 1;
+    color: var(--primary);
+}
+
+.socialIcon svg {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.socialIcon:hover svg {
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+.cta {
+    background: linear-gradient(45deg, var(--primary-dark), var(--primary));
+    color: var(--background) !important;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+@media (max-width: 768px) {
+    .navLinks {
+        display: none; /* Add hamburger menu later if needed */
+    }
+}
