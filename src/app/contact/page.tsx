@@ -8,14 +8,35 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [isPending, startTransition] = useTransition();
 
+  const [error, setError] = useState<string | null>(null);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError(null);
+    
     const formData = new FormData(e.currentTarget);
+    const photos = formData.getAll('photos') as File[];
+    
+    // Validation de la taille côté client
+    let totalSize = 0;
+    const MAX_SIZE = 10 * 1024 * 1024; // 10 Mo
+    for (const photo of photos) {
+      if (photo.size > 0) {
+        totalSize += photo.size;
+      }
+    }
+
+    if (totalSize > MAX_SIZE) {
+      setError("Le poids total des photos dépasse la limite de 10 Mo. Veuillez réduire la taille ou le nombre d'images.");
+      return;
+    }
     
     startTransition(async () => {
       const result = await sendQuoteRequest(formData);
       if (result.success) {
         setSubmitted(true);
+      } else {
+        setError(result.error || "Une erreur est survenue lors de l'envoi.");
       }
     });
   };
@@ -84,6 +105,12 @@ export default function Contact() {
                 <p className={styles.fileHint}>Formats acceptés: JPG, PNG. Taille max: 5Mo par photo.</p>
               </div>
             </div>
+
+            {error && (
+              <div className={styles.errorMessage}>
+                {error}
+              </div>
+            )}
 
             <button type="submit" className={styles.submitBtn} disabled={isPending}>
               {isPending ? "Envoi en cours..." : "Envoyer ma demande de devis"}

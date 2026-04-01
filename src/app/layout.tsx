@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "AH PEINTURE | Construction & Rénovation",
@@ -20,7 +21,9 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
 }
+

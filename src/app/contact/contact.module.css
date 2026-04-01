@@ -102,6 +102,17 @@
     margin-top: 1.5rem;
 }
 
+.errorMessage {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: #ff5555;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
 .success {
     height: 100vh;
     display: flex;
