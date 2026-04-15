@@ -13,7 +13,7 @@ const Hero = () => {
                     <span className={styles.white}>Rénovateur</span>
                 </h1>
                 <p className={styles.description}>
-                    Donnez vie à vos projets avec une expertise professionnelle.
+                    Donnez vie à vos projets à Béziers et ses alentours avec une expertise professionnelle.
                     Qualité, rigueur et finitions d'exception pour votre intérieur et extérieur.
                 </p>
 

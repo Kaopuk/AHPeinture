@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Footer.module.css';
+import ServiceMap from './ServiceMap';
 
 const Footer = () => {
     return (
@@ -39,6 +40,11 @@ const Footer = () => {
                         <Link href="/">Accueil</Link>
                         <Link href="/realisations">Réalisations</Link>
                         <Link href="/contact">Devis</Link>
+                    </div>
+
+                    <div className={styles.mapContainer}>
+                        <h4>Zone d'intervention</h4>
+                        <ServiceMap />
                     </div>
                 </div>
                 <div className={styles.bottom}>

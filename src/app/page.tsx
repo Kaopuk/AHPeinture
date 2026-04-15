@@ -24,7 +24,7 @@ export default function Home() {
             <div className={styles.textSide}>
               <p>
                 Bienvenue chez <strong>AH PEINTURE</strong>. Fort d'une expertise reconnue dans le domaine du bâtiment, 
-                Alexandre Hodier vous accompagne dans tous vos projets de construction et de rénovation. 
+                Alexandre Hodier vous accompagne dans tous vos projets de construction et de rénovation à Béziers et ses alentours. 
               </p>
               <p>
                 Nous mettons un point d'honneur à utiliser des matériaux de haute qualité pour garantir 
