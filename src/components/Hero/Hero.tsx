@@ -10,7 +10,7 @@ const Hero = () => {
                 <h1 className={styles.title}>
                     <span className={styles.gold}>Artisan Peintre</span>
                     <br />
-                    <span className={styles.white}>Rénovateur</span>
+                    <span className={styles.white}>Neuf et Rénovation</span>
                 </h1>
                 <p className={styles.description}>
                     Donnez vie à vos projets à Béziers et ses alentours avec une expertise professionnelle.
